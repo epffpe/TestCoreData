@@ -16,6 +16,11 @@
 		F1F58E421BC6CCF200CBD53A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F58E401BC6CCF200CBD53A /* LaunchScreen.storyboard */; };
 		F1F58E4D1BC6CCF200CBD53A /* TestCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E4C1BC6CCF200CBD53A /* TestCoreDataTests.m */; };
 		F1F58E581BC6CCF200CBD53A /* TestCoreDataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E571BC6CCF200CBD53A /* TestCoreDataUITests.m */; };
+		F1F58E6D1BC706E500CBD53A /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E661BC706E500CBD53A /* User+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		F1F58E6E1BC706E500CBD53A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E681BC706E500CBD53A /* User.m */; settings = {ASSET_TAGS = (); }; };
+		F1F58E6F1BC706E500CBD53A /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E6A1BC706E500CBD53A /* Photo+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		F1F58E701BC706E500CBD53A /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E6C1BC706E500CBD53A /* Photo.m */; settings = {ASSET_TAGS = (); }; };
+		F1F58E731BC7085300CBD53A /* User+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F58E721BC7085300CBD53A /* User+Create.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		F1F58E531BC6CCF200CBD53A /* TestCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F58E571BC6CCF200CBD53A /* TestCoreDataUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCoreDataUITests.m; sourceTree = "<group>"; };
 		F1F58E591BC6CCF200CBD53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F58E651BC706E500CBD53A /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F1F58E661BC706E500CBD53A /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F1F58E671BC706E500CBD53A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F1F58E681BC706E500CBD53A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F1F58E691BC706E500CBD53A /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F1F58E6A1BC706E500CBD53A /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F1F58E6B1BC706E500CBD53A /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		F1F58E6C1BC706E500CBD53A /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		F1F58E711BC7085300CBD53A /* User+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Create.h"; sourceTree = "<group>"; };
+		F1F58E721BC7085300CBD53A /* User+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Create.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +118,16 @@
 		F1F58E2E1BC6CCF200CBD53A /* TestCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F1F58E651BC706E500CBD53A /* User+CoreDataProperties.h */,
+				F1F58E661BC706E500CBD53A /* User+CoreDataProperties.m */,
+				F1F58E711BC7085300CBD53A /* User+Create.h */,
+				F1F58E721BC7085300CBD53A /* User+Create.m */,
+				F1F58E671BC706E500CBD53A /* User.h */,
+				F1F58E681BC706E500CBD53A /* User.m */,
+				F1F58E691BC706E500CBD53A /* Photo+CoreDataProperties.h */,
+				F1F58E6A1BC706E500CBD53A /* Photo+CoreDataProperties.m */,
+				F1F58E6B1BC706E500CBD53A /* Photo.h */,
+				F1F58E6C1BC706E500CBD53A /* Photo.m */,
 				F1F58E321BC6CCF200CBD53A /* AppDelegate.h */,
 				F1F58E331BC6CCF200CBD53A /* AppDelegate.m */,
 				F1F58E351BC6CCF200CBD53A /* ViewController.h */,
@@ -273,7 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F58E731BC7085300CBD53A /* User+Create.m in Sources */,
+				F1F58E6D1BC706E500CBD53A /* User+CoreDataProperties.m in Sources */,
 				F1F58E3D1BC6CCF200CBD53A /* TestCoreData.xcdatamodeld in Sources */,
+				F1F58E6E1BC706E500CBD53A /* User.m in Sources */,
+				F1F58E6F1BC706E500CBD53A /* Photo+CoreDataProperties.m in Sources */,
+				F1F58E701BC706E500CBD53A /* Photo.m in Sources */,
 				F1F58E371BC6CCF200CBD53A /* ViewController.m in Sources */,
 				F1F58E341BC6CCF200CBD53A /* AppDelegate.m in Sources */,
 				F1F58E311BC6CCF200CBD53A /* main.m in Sources */,

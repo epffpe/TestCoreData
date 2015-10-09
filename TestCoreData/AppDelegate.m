@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "User+CoreDataProperties.h"
+#import "User+Create.h"
+#import "Photo+CoreDataProperties.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,43 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSManagedObjectContext *context = self.managedObjectContext;
+    
+    Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:context];
+    photo.url = [NSString stringWithFormat:@"Hello %d", arc4random() % 100];
+    photo.owner = [User userWithName:@"Ivan" lastName:@"Perez" inManagedObjectContext:context];
+    
+    NSError *error;
+//    [context save:&error];
+    [self saveContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Photo"];
+    
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    for (Photo *object in matches) {
+        NSLog(@"%lu -> %@, %@", (unsigned long)[matches indexOfObject:object], object.url, object.owner.name);
+    }
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+//    // Specify criteria for filtering which objects to fetch
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
+//    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
+//                                                                   ascending:YES];
+//    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+    
+    error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        
+    }
+    for (User *obj in fetchedObjects) {
+        NSLog(@"%@ %@ has %lu photos", obj.name, obj.lastName, [obj.photos count]);
+    }
     return YES;
 }
 
